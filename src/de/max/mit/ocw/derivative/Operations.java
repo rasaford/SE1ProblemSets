@@ -1,7 +1,5 @@
 package de.max.mit.ocw.derivative;
 
-import sun.swing.BakedArrayList;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,10 +9,10 @@ import java.util.List;
  */
 public class Operations {
 
-	public static Function add(Function... functions){
+	public static Function add(Function... functions) {
 		List<Object> out = new ArrayList<>();
 		for (Function f : functions) {
-			if (!f.getOperands().equals("0"))
+			if (f.getOperands().size() == 1 && !f.getOperands().get(0).equals("0"))
 				out.add(f);
 		}
 		return new Function(Operation.ADD, Arrays.asList(functions));

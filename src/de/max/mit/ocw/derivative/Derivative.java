@@ -13,8 +13,7 @@ public class Derivative {
 			return new Function("0");
 		if (variable(function, var))
 			return new Function("1");
-		if (function.getOperation().equals(Operation.ADD))
-		{
+		if (function.getOperation().equals(Operation.ADD)) {
 			List<Object> obj = function.getOperands();
 			List<Object> out = new ArrayList<>();
 			for (Object o : obj) {

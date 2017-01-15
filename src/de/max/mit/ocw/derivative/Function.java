@@ -31,6 +31,6 @@ public class Function {
 	@Override
 	public String toString() {
 		String op = (operation == null) ? "" : operation.toString();
-		return "(" + op + " " + operands  + ")";
+		return "(" + op + " " + operands + ")";
 	}
 }
