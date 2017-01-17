@@ -160,21 +160,24 @@ public class Test_Helper {
 	@Marking(points = 1)
 	public void test_220_zyklischRechtsRotieren_null() {
 		final int[] in = new int[]{};
-		Assert.assertArrayEquals(new int[]{}, zyklischRechtsRotieren(in));
+		zyklischRechtsRotieren(in);
+		Assert.assertArrayEquals(new int[]{}, in);
 	}
 
 	@Test
 	@Marking(points = 1)
 	public void test_230_zyklischRechtsRotieren_leer() {
 		final int[] in = new int[]{};
-		Assert.assertArrayEquals(new int[]{}, zyklischRechtsRotieren(in));
+		zyklischRechtsRotieren(in);
+		Assert.assertArrayEquals(new int[]{}, in);
 	}
 
 	@Test
 	@Marking(points = 1)
 	public void test_240_zyklischRechtsRotieren_eins() {
 		final int[] in = new int[]{1};
-		Assert.assertArrayEquals(new int[]{1}, zyklischRechtsRotieren(in));
+		zyklischRechtsRotieren(in);
+		Assert.assertArrayEquals(new int[]{1}, in);
 	}
 
 	@Test
@@ -182,7 +185,8 @@ public class Test_Helper {
 	public void test_250_zyklischRechtsRotieren_zwei() {
 		final int[] in = new int[]{7, 8},
 				expected = new int[]{8, 7};
-		Assert.assertArrayEquals(expected, zyklischRechtsRotieren(in));
+		zyklischRechtsRotieren(in);
+		Assert.assertArrayEquals(expected, in);
 	}
 
 	@Test
@@ -190,6 +194,7 @@ public class Test_Helper {
 	public void test_260_zyklischRechtsRotieren_sieben() {
 		final int[] in = new int[]{7, 6, 5, 4, 3, 2, 1},
 				expected = new int[]{1, 7, 6, 5, 4, 3, 2};
-		Assert.assertArrayEquals(expected, zyklischRechtsRotieren(in));
+		zyklischRechtsRotieren(in);
+		Assert.assertArrayEquals(expected, in);
 	}
 }

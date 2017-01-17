@@ -13,7 +13,7 @@ public class XMas1 {
 		}
 		System.out.println(spaces + "X");
 		
-		//main loop
+		//Main loop
 		for (int i = 0; i < rows; i++)
 		{
 			//backward spaces

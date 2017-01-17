@@ -103,37 +103,44 @@ public class Test_Helper {
 
 		{
 			final int[] input = new int[]{};
-			Assert.assertArrayEquals(new int[]{}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{}, input);
 		}
 
 		{
 			final int[] input = new int[]{1};
-			Assert.assertArrayEquals(new int[]{1}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{1}, input);
 		}
 
 		{
 			final int[] input = new int[]{1, 2};
-			Assert.assertArrayEquals(new int[]{2, 1}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{2, 1}, input);
 		}
 
 		{
 			final int[] input = new int[]{2, 1};
-			Assert.assertArrayEquals(new int[]{1, 2}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{1, 2}, input);
 		}
 
 		{
 			final int[] input = new int[]{-1, 22, -333};
-			Assert.assertArrayEquals(new int[]{-333, 22, -1}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{-333, 22, -1}, input);
 		}
 
 		{
 			final int[] input = new int[]{-1, 22, -333};
-			Assert.assertArrayEquals(new int[]{-333, 22, -1}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{-333, 22, -1}, input);
 		}
 
 		{
 			final int[] input = new int[]{-1, 22, -333, 24, 55};
-			Assert.assertArrayEquals(new int[]{55, 24, -333, 22, -1}, spiegelung(input));
+			spiegelung(input);
+			Assert.assertArrayEquals(new int[]{55, 24, -333, 22, -1}, input);
 		}
 
 	}

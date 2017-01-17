@@ -100,11 +100,13 @@ public class Helper {
 	 * @param values Das zu verschiebende Feld aus Werten. Die Werte werden beim Aufruf zyklisch nach "rechts" verschoben. Falls
 	 *               das Feld null oder leer ist, erfolgt keine Aktion.
 	 */
-	static public int[] zyklischRechtsRotieren(final int[] values) {
-		if (values == null || values.length < 2) return values;
-		int[] out = new int[values.length];
-		out[0] = values[values.length - 1];
-		for (int i = 1; i < values.length; i++) out[i] = values[i - 1];
-		return out;
+	static public void zyklischRechtsRotieren(final int[] values) {
+		if (values == null || values.length < 2) return;
+		// in place incremental swap
+		for (int i = values.length - 1; i > 0; i--) {
+			int temp = values[i];
+			values[i] = values[i - 1];
+			values[i - 1] = temp;
+		}
 	}
 }

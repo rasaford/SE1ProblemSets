@@ -1,6 +1,7 @@
 package de.hdm_stuttgart.sw1.klausur;
 
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Formatter;
 import java.util.HashMap;
@@ -101,17 +102,13 @@ public class Helper {
 	 *
 	 * @param werte Ein Feld aus Werten oder null (keine Aktion).
 	 */
-	// WHAT IS THIS SHIT ??!!!
-	static public int[] spiegelung(int[] werte) {
-		if (werte == null || werte.length == 0) return werte;
-		for (int a : werte) System.out.println("a.in = " + a);
-		int[] out = new int[werte.length];
-		for (int i = 0; i < werte.length; i++) {
-			out[i] = werte[werte.length - i - 1];
+	static public void spiegelung(int[] werte) {
+		if(werte == null || werte.length == 0) return;
+		for (int i = 0; i < werte.length / 2; i++) {
+			int temp = werte[i];
+			werte[i] = werte[werte.length - i - 1];
+			werte[werte.length - i - 1] = temp;
 		}
-		System.out.println("out.length = " + out.length);
-		for (int a : out) System.out.println("a = " + a);
-		return out;
 	}
 
 	/**
