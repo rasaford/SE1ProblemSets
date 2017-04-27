@@ -7,7 +7,7 @@ public class Helper {
 
 	/**
 	 * Durchsuche ein Array nach der Häufigkeit des Auftretens eines gegebenen Werts.
-	 * <p>
+	 * <p
 	 * Beispiel: Der Wert 3 taucht im Array {1, -5, 3, 0, 3} zweifach auf.
 	 * <p>
 	 * Sonderfall: Das Array ist null oder leer, dann ist das Ergebnis 0

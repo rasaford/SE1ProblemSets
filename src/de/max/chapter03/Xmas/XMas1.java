@@ -1,29 +1,24 @@
 package de.max.chapter03.Xmas;
 
 public class XMas1 {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		int rows = 10;
 		String spaces = "";
-		
+
 		//generate spaces 
-		for (int i = 0; i < rows; i++)
-		{
+		for (int i = 0; i < rows; i++) {
 			spaces += " ";
 		}
 		System.out.println(spaces + "X");
-		
+
 		//Main loop
-		for (int i = 0; i < rows; i++)
-		{
+		for (int i = 0; i < rows; i++) {
 			//backward spaces
-			for (int k = rows - i; k > 0; k--)
-			{
+			for (int k = rows - i; k > 0; k--) {
 				System.out.print(' ');
 			}
 			//forward stars
-			for (int j = 0; j <= i * 2; j++)
-			{
+			for (int j = 0; j <= i * 2; j++) {
 				System.out.print('*');
 			}
 			//line break
